@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services - MyWebsite{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Our Services</h1>
+    <p class="text-center">
+        We offer a wide range of services to help you achieve your goals. Explore what we can do for you!
+    </p>
+
+    <!-- To make the service page dynamic by looping through the services passed from the route, use this inside service.html -->
+    <!-- <div class="row mt-5">
+        {% for service in services %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{{ service['image'] }}" class="card-img-top" alt="{{ service['name'] }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ service['name'] }}</h5>
+                    <p class="card-text">{{ service['description'] }}</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div> -->
+
+    <!-- Non dynamic implementation -->
+    <div class="row mt-5">
+        <!-- Service 1 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 1">
+                <div class="card-body">
+                    <h5 class="card-title">Service 1</h5>
+                    <p class="card-text">Our Service 1 provides exceptional value, helping you streamline operations and improve performance.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 2">
+                <div class="card-body">
+                    <h5 class="card-title">Service 2</h5>
+                    <p class="card-text">Service 2 offers specialized solutions that empower your business to reach new heights.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 3">
+                <div class="card-body">
+                    <h5 class="card-title">Service 3</h5>
+                    <p class="card-text">Our Service 3 helps you stay ahead in the industry with cutting-edge solutions tailored to your needs.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional Service Section -->
+    <div class="mt-5">
+        <h3 class="text-center">More Services</h3>
+        <p class="text-center">We provide a wide array of additional services that might be of interest to you. Contact us for more information.</p>
+    </div>
+</div>
+{% endblock %}

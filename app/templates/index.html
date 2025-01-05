@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Homepage - MyWebsite{% endblock %}
+
+{% block content %}
+<div class="bg-light p-5 text-center">
+    <h1>Welcome to MyWebsite</h1>
+    {% if current_user.is_authenticated %}
+        <div class="alert alert-success">
+            <strong>Welcome back, {{ current_user.username }}!</strong> We are glad to have you here.
+        </div>
+        <div class="text-center mt-3">
+            <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+        </div>
+    {% else %}
+        <p class="text-center">Please <a href="/login">login</a> to access more features.</p>
+    {% endif %}
+    <p class="lead">Your one-stop destination for amazing products and services.</p>
+    <a href="/about" class="btn btn-primary">Learn More</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4 text-center">
+        <i class="bi bi-shop display-4 text-primary"></i>
+        <h3 class="mt-3">Our Products</h3>
+        <p>Explore our wide range of high-quality products tailored to your needs.</p>
+        <a href="/products" class="btn btn-outline-primary">View Products</a>
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="bi bi-briefcase-fill display-4 text-success"></i>
+        <h3 class="mt-3">Our Services</h3>
+        <p>We offer top-notch services to help you achieve your goals.</p>
+        <a href="/services" class="btn btn-outline-success">View Services</a>
+    </div>
+    <div class="col-md-4 text-center">
+        <i class="bi bi-pen-fill display-4 text-info"></i>
+        <h3 class="mt-3">Our Blog</h3>
+        <p>Stay updated with the latest trends and insights from our blog.</p>
+        <a href="/blog" class="btn btn-outline-info">Read Blog</a>
+    </div>
+</div>
+{% endblock %}
