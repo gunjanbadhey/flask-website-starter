@@ -25,13 +25,13 @@ This template provides a solid foundation for building a variety of web applicat
 
 You can log in using the following demo credentials:
 
-- **Username**: `demo_user`
-- **Password**: `demo_password`
+- **Username**: `demo@gunjan.com`
+- **Password**: `demo123`
 
 Additionally, an **Admin User** is also available for testing admin-level access:
 
-- **Username**: `admin_user`
-- **Password**: `admin_password`
+- **Username**: `admin@gunjan.com`
+- **Password**: `admin123`
 
 These demo users are pre-configured in the application and are designed for quick testing of the login functionality and user roles.
 
